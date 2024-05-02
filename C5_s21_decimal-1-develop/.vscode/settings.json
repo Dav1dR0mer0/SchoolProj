@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"bit": "c",
+		"type_traits": "c",
+		"random": "c",
+		"ratio": "c",
+		"system_error": "c",
+		"__locale": "c"
+	}
+}
