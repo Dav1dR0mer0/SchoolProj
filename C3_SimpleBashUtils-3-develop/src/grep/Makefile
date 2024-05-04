@@ -1,8 +1,7 @@
 s21_grep:
 	gcc -std=c11 -pedantic -Wall -Werror -Wextra s21_grep.c s21_grep.h -o s21_grep
-	clang-format -style=Google -i ../../src/cat/*.c *.h
-test:
-	sh test_grep.sh
+test: s21_grep
+	bash test_grep.sh
 style:
 	clang-format -style=Google -n *.c *.h
 	clang-format -style=Google -i *.c *.h

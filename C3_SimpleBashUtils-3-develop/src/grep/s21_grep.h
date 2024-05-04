@@ -19,6 +19,7 @@ typedef struct {
   int h;  //+
   int s;  //+
   int o;  //+
+  int current_line_number;
   char comp_string[BUFFER];
   char line_from_file[BUFFER];
   char filename[BUFFER];
@@ -27,6 +28,7 @@ typedef struct {
 void parser(int argc, char **argv, Flags *flag);
 void output(char **argv, Flags *flag, int *flag_printable_name);
 void print_match_only(Flags *flag, regmatch_t *start, regex_t *reg);
-void f_flag(Flags *flag);
-
+FILE* open_file(const char* filename);
+int apply_regex(regex_t* reg, const char* str);
+void print_line(char* line, Flags* flags);
 #endif

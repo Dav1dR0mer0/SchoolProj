@@ -20,9 +20,9 @@ for flag in "${flags[@]}"; do
 
             # Compare the output
             if [ "$s21_output" == "$grep_output" ]; then
-                echo "\033[1;33m TEST PASSED \033[m"
+                echo "TEST PASSED"
             else
-                echo "\033[1;34m TEST FAILED \033[m"
+                echo "TEST FAILED"
             fi
         done  # Close the for loop with a done statement
     done
